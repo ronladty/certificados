@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ILTEC - Certificaciones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue-900: #0e3a6d;
+      --blue-700: #1c5fa8;
+      --blue-600: #2b74c0;
+      --gray-100: #f4f6f8;
+      --text: #1a1f36;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text);}
+    .topbar {
+      background: linear-gradient(90deg, var(--blue-900), var(--blue-700));
+      color: #fff;
+    }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-family: Montserrat, sans-serif; font-weight: 800; letter-spacing: .5px; }
+    .brand img { height: 38px; width: 38px; object-fit: contain; filter: drop-shadow(0 2px 2px rgba(0,0,0,.2));}
+    .brand span { font-size: 20px; }
+    .menu {
+      display: flex; gap: 22px; align-items: center; font-weight: 600; font-size: 14px;
+    }
+    .menu a { color: #e9f2ff; text-decoration: none; opacity: .95; }
+    .menu a.active { position: relative; }
+    .menu a.active::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: -18px; height: 3px; background: #cddfff; border-radius: 2px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(14,58,109,.70), rgba(14,58,109,.70)), url('hero_iltec.png') center/cover no-repeat;
+      color: white;
+      padding: 64px 0 56px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: Montserrat, sans-serif;
+      font-size: clamp(36px, 6vw, 60px);
+      margin: 0 0 10px 0;
+      letter-spacing: 2px;
+    }
+    .hero p { max-width: 920px; margin: 8px auto 0; line-height: 1.6; font-size: 18px; color: #eef4ff; }
+    .section { background: white; }
+    .section .container { padding: 40px 20px; }
+    .headline { text-align: center; }
+    .headline h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: clamp(24px, 4.5vw, 42px);
+      margin: 0 0 10px 0;
+      color: var(--blue-900);
+    }
+    .headline .sub { color: var(--blue-700); font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
+    .headline p { max-width: 980px; margin: 8px auto 0; color: #4a5568; }
+    .pdf-wrap {
+      background: var(--gray-100);
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 10px;
+      box-shadow: 0 10px 24px rgba(16,24,40,.10);
+      margin-top: 24px;
+    }
+    .pdf-actions {
+      display: flex; gap: 12px; justify-content: flex-end; margin: 8px 4px 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      appearance:none; border: 0; border-radius: 10px; padding: 10px 14px; font-weight: 600; cursor: pointer;
+      background: var(--blue-700); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn.secondary { background: #eef2f7; color: #0e2946; border: 1px solid #d7dde6; }
+    iframe { width: 100%; height: 80vh; border: 0; border-radius: 10px; background: white; }
+    footer {
+      text-align: center; color: #6b7280; padding: 24px; font-size: 14px;
+      border-top: 1px solid #e5e7eb;
+    }
+    @media (max-width: 768px) {
+      .menu { display: none; }
+      iframe { height: 70vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <img src="hero_iltec.png" alt="ILTEC logo" />
+        <span>ILTEC</span>
+      </div>
+      <nav class="menu">
+        <a href="#" class="active">Certificaciones</a>
+        <a href="#">Inicio</a>
+        <a href="#">Aula</a>
+        <a href="#">Programas</a>
+        <a href="#">Comunidad ILTEC</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container">
+      <h1>CERTIFICACIONES</h1>
+      <p>Consulta tu certificado del programa completado en esta sección o solicita tu certificado a través de nuestros canales de contacto.</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="headline">
+        <div class="sub">¡VERIFICA TU CERTIFICADO ILTEC!</div>
+        <h2>VERIFICADOR DE CERTIFICADOS</h2>
+        <p>En esta sección podrás verificar los certificados emitidos por ILTEC para validar su autenticidad. El documento que ves a continuación se carga directamente desde el archivo PDF proporcionado.</p>
+      </div>
+
+      <div class="pdf-wrap">
+        <div class="pdf-actions">
+          <a class="btn" href="certificado_iltec.pdf" download>Descargar PDF</a>
+          <a class="btn secondary" href="certificado_iltec.pdf" target="_blank" rel="noopener">Abrir en pestaña nueva</a>
+        </div>
+        <iframe src="certificado_iltec.pdf"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © certificado_iltec.pdf — Vista previa de certificado.
+  </footer>
+</body>
+</html>
